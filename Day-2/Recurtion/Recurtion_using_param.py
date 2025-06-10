@@ -1,6 +1,11 @@
 # Recurtion using Parameters with head and Tail recurtion
 
-# print 1 to N number using parameter Recurtion with Head recurtion
+"""# print 1 to N number using parameter Recurtion with Head recurtion
+output: 1
+        2
+        3
+        4
+"""
 
 
 def func(i, N):
@@ -12,7 +17,14 @@ def func(i, N):
 
 func(1, 5)
 
-# print 1 to N number using parameter Recurtion with Tail recurtion also called BackTracking
+"""# print 1 to N number using parameter Recurtion with Tail recurtion also called BackTracking
+output:
+        4
+        3
+        2
+        1
+
+"""
 
 
 def func(i, N):
@@ -24,7 +36,13 @@ def func(i, N):
 
 func(1, 5)
 
-# print 1 to N number using parameter Recurtion with Tail recurtion.
+""" # print 1 to N number using parameter Recurtion with Tail recurtion.
+output: 
+        1
+        2
+        3
+        4
+"""
 
 
 def func(i, N):
