@@ -49,3 +49,15 @@ def func(N):
 
 x = func(3)
 print(x)
+
+# ----------------------------------------------------------------------------------
+
+
+def func(i, N):
+    if i > N:
+        return 0
+    return i + func(i + 1, N)
+
+
+x = func(1, 4)
+print(x)
