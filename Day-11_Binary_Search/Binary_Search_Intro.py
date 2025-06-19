@@ -1,52 +1,52 @@
-# # Method -> 1,  Iterative Solution
+# Method -> 1,  Iterative Solution
 
-# nums = [1, 2, 3, 4, 5, 9, 10, 12, 34]
+nums = [1, 2, 3, 4, 5, 9, 10, 12, 34]
 
-# nums.sort()
-# n = len(nums)
-# low = 0
-# high = n - 1
-# target = 10
+nums.sort()
+n = len(nums)
+low = 0
+high = n - 1
+target = 10
 
-# while low <= high:
-#     mid = (low + high) // 2
-#     if target == nums[mid]:
-#         print(mid)
-#         break
+while low <= high:
+    mid = (low + high) // 2
+    if target == nums[mid]:
+        print(mid)
+        break
 
-#     elif target > nums[mid]:
-#         low = mid + 1
-#     else:
-#         high = mid - 1
-# else:
-#     print("-1")
-
-
-# ## Method -> 2, Iterative Solution
+    elif target > nums[mid]:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    print("-1")
 
 
-# def binarySearch(nums, target):
-
-#     n = len(nums)
-#     nums.sort()
-#     low = 0
-#     high = n - 1
-
-#     while low <= high:
-#         mid = (low + high) // 2
-#         if target == nums[mid]:
-#             return mid
-#         elif target > nums[mid]:
-#             low = mid + 1
-#         else:
-#             high = mid - 1
-#     return -1
+## Method -> 2, Iterative Solution
 
 
-# print(binarySearch(nums=[1, 2, 3, 4, 5, 6, 7, 8, 9], target=6))
+def binarySearch(nums, target):
+
+    n = len(nums)
+    nums.sort()
+    low = 0
+    high = n - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if target == nums[mid]:
+            return mid
+        elif target > nums[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
 
 
-## Method -> 3, Recursive Solution
+print(binarySearch(nums=[1, 2, 3, 4, 5, 6, 7, 8, 9], target=6))
+
+
+# Method -> 3, Recursive Solution
 
 
 def binary_Search(nums, low, high):
