@@ -1,3 +1,6 @@
+## T.C. -> O(2^N), T.C. -> O(N)
+
+
 def solve(index, subset):
     global arr
     global result
