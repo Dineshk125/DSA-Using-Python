@@ -18,8 +18,8 @@ def backtrack_sub(index, total, subset):
     subset.append(nums[index])
     summ = total + nums[index]
     backtrack_sub(index + 1, summ, subset)
-    subset.pop()
-    summ = total
+    e = subset.pop()
+    summ -= e  ## sum = total
     backtrack_sub(index + 1, summ, subset)
 
 
