@@ -25,7 +25,4 @@ class Solution:
 
 
 s1 = Solution()
-nums = [1, 2, 3, 6, 7]
-result = []
-target = 7
 print(s1.combinationSum(candidates=[2, 3, 6, 7], target=7))
