@@ -40,18 +40,18 @@ class Solution(object):
         results = []
         candidates.sort()
 
-        def backtrack(start, path, target):
+        def backtrack(index, subset, target):
             if target == 0:
-                results.append(list(path))
+                results.append(list(subset))
                 return
-            for i in range(start, len(candidates)):
-                if i > start and candidates[i] == candidates[i - 1]:
+            for i in range(index, len(candidates)):
+                if i > index and candidates[i] == candidates[i - 1]:
                     continue
                 if candidates[i] > target:
                     break
-                path.append(candidates[i])
-                backtrack(i + 1, path, target - candidates[i])
-                path.pop()
+                subset.append(candidates[i])
+                backtrack(i + 1, subset, target - candidates[i])
+                subset.pop()
 
         backtrack(0, [], target)
         return results
