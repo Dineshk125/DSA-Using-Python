@@ -1,47 +1,73 @@
-class MyStack:
-    def __init__(self):
-        self.tail = None
-        self.head = None
+class Node:
 
-
-class StackNode:
-    # Constructor to initialize a node
     def __init__(self, data):
-        self.data = data
+        self.val = data
         self.next = None
+        self.prev = None
 
-    # Function to push an integer into the stack.
-    def push(self, val):
-        if self.head is None:
-            self.head = StackNode(val)
-            self.tail = self.head
-        else:
-            self.tail.next = StackNode(val)
-            self.tail = self.tail.next
 
-    # Function to remove an item from top of the stack.
-    def pop(self):
+class StackUsingDLL:
+
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def push(self, item):
+        newNode = Node(item)
         if self.head == None:
-            return -1
-        prev = None
-        curr = self.head
-        while curr is not self.tail:
-            prev = curr
-            curr = curr.next
-        if prev is not None:
-            prev.next = None
-            self.tail = prev
-            return curr.data
+            self.head = newNode
+            self.tail = newNode
         else:
+            newNode.prev = self.tail
+            self.tail.next = newNode
+            self.tail = newNode
+
+    def pop(self):
+        if self.tail == None:
+            return "Linked List Is Empty."
+        elif self.tail == self.head:
+            x = self.tail.val
+            self.head = None
             self.tail = None
-            return curr.data
+            return x
+
+        else:
+            x = self.tail.val
+            self.tail = self.tail.prev
+            self.tail.next = None
+            return x
+
+    def top(self):
+        if self.head == None:
+            return "Linked List is empty."
+        else:
+            return self.head.val
+
+    def show_ele(self):
+        if self.head == None:
+            return "LL Is Empty."
+        else:
+            current = self.head
+            while current is not None:
+                print(current.val, end=" ")
+                current = current.next
+            print()
 
 
-s1 = StackNode()
+s1 = StackUsingDLL()
 
-s1.push(100)
-s1.push(200)
-s1.push(300)
-
-print(s1.data)
-print(s1.pop(0))
+s1.show_ele()
+s1.push(10)
+s1.push(20)
+s1.push(30)
+s1.push(40)
+print(s1.top())
+print(s1.head.val)
+print(s1.tail.val)
+s1.show_ele()
+print(f"pop value is : {s1.pop()}")
+print(s1.head.val)
+print(s1.tail.val)
+s1.show_ele()
+print(s1.top())
+print(s1.tail.val)
