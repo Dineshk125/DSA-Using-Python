@@ -1,32 +1,32 @@
-# class Parenthesis:
+class Parenthesis:
 
-#     def validParths(self, s):
+    def validParths(self, s):
 
-#         stack = []
+        stack = []
 
-#         for bracket in s:
-#             if bracket == "(" or bracket == "[" or bracket == "{":
-#                 stack.append(bracket)
+        for bracket in s:
+            if bracket == "(" or bracket == "[" or bracket == "{":
+                stack.append(bracket)
 
-#             else:
-#                 if len(stack) == 0:
-#                     return False
-#                 ch = stack.pop()
+            else:
+                if len(stack) == 0:
+                    return False
+                ch = stack.pop()
 
-#                 if (
-#                     (bracket == ")" and ch == "(")
-#                     or (bracket == "]" and ch == "[")
-#                     or (bracket == "}" and ch == "{")
-#                 ):
-#                     continue
-#                 else:
-#                     return False
-#         return len(stack) == 0
+                if (
+                    (bracket == ")" and ch == "(")
+                    or (bracket == "]" and ch == "[")
+                    or (bracket == "}" and ch == "{")
+                ):
+                    continue
+                else:
+                    return False
+        return len(stack) == 0
 
 
-# s1 = Parenthesis()
+s1 = Parenthesis()
 
-# print(s1.validParths(s=""))
+print(s1.validParths(s=""))
 
 
 # method 2 --->
