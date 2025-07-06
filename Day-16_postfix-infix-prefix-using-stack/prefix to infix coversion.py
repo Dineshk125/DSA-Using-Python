@@ -1,6 +1,6 @@
-class PosttoInfix:
+class PretoInfix:
 
-    def postToinfix(self, s):
+    def preToinfix(self, s):
         s = s[::-1]
 
         stack = []
@@ -22,20 +22,20 @@ class PosttoInfix:
         return stack[-1]
 
 
-s1 = PosttoInfix()
+s1 = PretoInfix()
 
 exp = input("Enter Postfix Expression: ")
 
-x = s1.postToinfix(exp)
+x = s1.preToinfix(exp)
 print(x)
 
 
 # methid -> 2
 
 
-class PosttoInfix:
+class PretoInfix:
 
-    def postToinfix(self, s):
+    def preToinfix(self, s):
 
         stack = []
 
@@ -56,19 +56,19 @@ class PosttoInfix:
         return stack[-1]
 
 
-s1 = PosttoInfix()
+s1 = PretoInfix()
 
 exp = input("Enter Postfix Expression: ")
 
-x = s1.postToinfix(exp)
+x = s1.preToinfix(exp)
 print(x)
 
 # method -> 3 , Without using slicing
 
 
-class PosttoInfix:
+class PretoInfix:
 
-    def postToinfix(self, s):
+    def preToinfix(self, s):
         n = len(s)
 
         stack = []
@@ -90,9 +90,9 @@ class PosttoInfix:
         return stack[-1]
 
 
-s1 = PosttoInfix()
+s1 = PretoInfix()
 
 exp = input("Enter Postfix Expression: ")
 
-x = s1.postToinfix(exp)
+x = s1.preToinfix(exp)
 print(x)
