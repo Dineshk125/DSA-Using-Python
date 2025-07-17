@@ -50,6 +50,7 @@ while right < len(nums):
     right += 1
 print(maxi)
 
+
 """
 Optimal Solution
 
